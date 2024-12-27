@@ -2,9 +2,7 @@ import UserCard from "../../components/UserCard";
 import { Suspense } from "react";
 
 async function getUsers() {
-  const res = await fetch("https://jsonplaceholder.typicode.com/users", {
-    cache: "force-cache",
-  });
+  const res = await fetch("https://jsonplaceholder.typicode.com/users");
 
   if (!res.ok) {
     throw new Error("Failed to fetch users");
